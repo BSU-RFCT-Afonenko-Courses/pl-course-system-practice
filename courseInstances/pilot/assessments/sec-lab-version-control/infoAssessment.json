@@ -1,0 +1,54 @@
+{
+  "uuid": "eb3f677b-a609-5ac1-b39e-0de3236c55a3",
+  "type": "Homework",
+  "title": "Управление версиями",
+  "set": "Homework",
+  "number": "3",
+  "maxPoints": 100,
+  "text": "\n",
+  "accessControl": [
+    {
+      "dateControl": {
+        "release": {
+          "date": "1970-01-01T00:00:00"
+        },
+        "due": {
+          "date": null
+        }
+      },
+      "afterComplete": {
+        "questions": {
+          "hidden": false
+        },
+        "score": {
+          "hidden": false
+        }
+      }
+    }
+  ],
+  "zones": [
+    {
+      "title": "Управление версиями",
+      "questions": [
+        {
+          "id": "system-practice/exr-version-control-local-history",
+          "autoPoints": 0,
+          "manualPoints": 50,
+          "triesPerVariant": 1,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        },
+        {
+          "id": "system-practice/exr-version-control-github-ssh",
+          "autoPoints": 0,
+          "manualPoints": 50,
+          "triesPerVariant": 1,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    }
+  ]
+}

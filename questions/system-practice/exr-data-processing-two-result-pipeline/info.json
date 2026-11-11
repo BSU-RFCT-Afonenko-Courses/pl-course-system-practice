@@ -1,0 +1,20 @@
+{
+  "uuid": "d752f980-b0f4-5480-ae1f-6fc3f251e5f6",
+  "type": "v3",
+  "title": "Две выборки наблюдений",
+  "topic": "Shell",
+  "gradingMethod": "Manual",
+  "singleVariant": true,
+  "showCorrectAnswer": false,
+  "partialCredit": false,
+  "preferences": {
+    "courseRequirement": {
+      "type": "string",
+      "default": "required",
+      "enum": [
+        "required",
+        "optional"
+      ]
+    }
+  }
+}

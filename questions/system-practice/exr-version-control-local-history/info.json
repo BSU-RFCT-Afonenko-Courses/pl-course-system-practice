@@ -1,0 +1,20 @@
+{
+  "uuid": "0bebd8fc-227b-5ee1-90e1-16417a1e4577",
+  "type": "v3",
+  "title": "Слияние изменений порога",
+  "topic": "Shell",
+  "gradingMethod": "Manual",
+  "singleVariant": true,
+  "showCorrectAnswer": false,
+  "partialCredit": false,
+  "preferences": {
+    "courseRequirement": {
+      "type": "string",
+      "default": "required",
+      "enum": [
+        "required",
+        "optional"
+      ]
+    }
+  }
+}

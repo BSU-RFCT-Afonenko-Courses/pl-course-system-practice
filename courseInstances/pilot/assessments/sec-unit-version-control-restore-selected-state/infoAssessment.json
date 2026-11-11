@@ -1,0 +1,45 @@
+{
+  "uuid": "c1e13496-3153-5d8b-8b25-c30041985d4f",
+  "type": "Homework",
+  "title": "Выбор состояния для восстановления",
+  "set": "Homework",
+  "number": "4",
+  "maxPoints": 100,
+  "text": "<p>Добровольная работа. Результат учитывается отдельно от обязательных\nлабораторных.</p>\n<p>Работу можно выполнить в native Workspace либо в собственной ОС. В\nWorkspace решение отправляется штатной кнопкой PrairieLearn без ручного\nсоздания ZIP; локальный маршрут сохраняет сдачу архива с\n<code>work/.git</code> и прежним пояснением. Оба маршрута проверяются\nвручную по одному условию.</p>\n",
+  "accessControl": [
+    {
+      "dateControl": {
+        "release": {
+          "date": "1970-01-01T00:00:00"
+        },
+        "due": {
+          "date": null
+        }
+      },
+      "afterComplete": {
+        "questions": {
+          "hidden": false
+        },
+        "score": {
+          "hidden": false
+        }
+      }
+    }
+  ],
+  "zones": [
+    {
+      "title": "Выбор состояния для восстановления",
+      "questions": [
+        {
+          "id": "system-practice/exr-version-control-restore-selected-state",
+          "autoPoints": 0,
+          "manualPoints": 100,
+          "triesPerVariant": 1,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    }
+  ]
+}

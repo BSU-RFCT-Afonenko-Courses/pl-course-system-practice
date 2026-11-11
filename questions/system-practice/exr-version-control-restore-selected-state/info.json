@@ -1,0 +1,33 @@
+{
+  "uuid": "9a2d15a3-e890-5c23-aa99-3f0cb086244f",
+  "type": "v3",
+  "title": "Выбор состояния для восстановления",
+  "topic": "Shell",
+  "gradingMethod": "Manual",
+  "singleVariant": true,
+  "workspaceOptions": {
+    "image": "ghcr.io/afonenko-course-tools/sp-git-workspace@sha256:465bf16061c3a44afdc61c77d1dd853216be35b0203072cb8e7c69a51a1bf31a",
+    "home": "/home/coder/workspace",
+    "port": 8080,
+    "rewriteUrl": true,
+    "gradedFiles": [
+      "work/**",
+      "work/.git/**",
+      "work/.*",
+      "explanation.m[d]",
+      ".pl-seed/identity.jso[n]"
+    ]
+  },
+  "showCorrectAnswer": false,
+  "partialCredit": false,
+  "preferences": {
+    "courseRequirement": {
+      "type": "string",
+      "default": "required",
+      "enum": [
+        "required",
+        "optional"
+      ]
+    }
+  }
+}

@@ -1,0 +1,101 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Начальный</p>
+<p>Получите отчёт о числе строк утренних измерений готовым инструментом
+проекта. Маршрут — PowerShell 7/Windows либо fish/Linux. <a
+href="https://bsu-rfct-afonenko-courses.github.io/System-Practice/tasks/index.html#sec-bank"
+target="_blank" rel="noopener noreferrer">Общие правила подготовки и
+проверки архива</a>.</p>
+<h3
+id="pl-dba13d69-dcb3-58dd-b193-b84c9937a5a8-исходное-состояние-1">Исходное
+состояние</h3>
+<p>Комплект содержит самостоятельный вход:</p>
+<pre class="text"><code>survey/
+├── tools/
+│   ├── count.ps1
+│   └── count.fish
+└── result/
+    └── current/
+        └── morning.txt</code></pre>
+<p>В <code>result/current/morning.txt</code> находятся строки
+<code>A=12</code> и <code>B=7</code> в этом порядке. Каждая
+заканчивается LF; кодировка — UTF-8 без BOM. Каталог назначения
+<code>result</code> существует, <code>result/line-count.txt</code> и
+<code>explanation.md</code> отсутствуют. Все файлы и каталоги обычные.
+Работайте внутри <code>survey</code>; сохраните вход и оба готовых
+инструмента.</p>
+<h3
+id="pl-dba13d69-dcb3-58dd-b193-b84c9937a5a8-договор-инструмента">Договор
+инструмента</h3>
+<p>Выберите <code>tools/count.ps1</code> для PowerShell либо
+<code>tools/count.fish</code> для fish. Исходный текст инструмента
+предоставлен готовым и сохраняется без изменений. В PowerShell пути
+передаются параметрами <code>SourcePath</code> и
+<code>ReportPath</code>; в fish входной путь — первый аргумент, новый
+отчёт — второй. Относительные пути отсчитываются от рабочего каталога
+вызова.</p>
+<p>Родительский каталог отчёта должен существовать, сам файл отчёта —
+отсутствовать. При успехе инструмент сохраняет вход и создаёт одну
+строку <code>lines=N</code>, где <code>N</code> — число строк входа. Тот
+же текст появляется в терминале; код завершения равен <code>0</code>.
+При отсутствующем входе инструмент сообщает причину, возвращает
+<code>2</code> и не создаёт отчёт.</p>
+<h3
+id="pl-dba13d69-dcb3-58dd-b193-b84c9937a5a8-результат-и-предъявление">Результат
+и предъявление</h3>
+<p>Запустите инструмент для <code>result/current/morning.txt</code>,
+указав новый отчёт <code>result/line-count.txt</code>. Прочитайте отчёт
+и установите код завершения. Файл должен содержать <code>lines=2</code>
+с завершающим LF в UTF-8 без BOM; в терминале появляется
+<code>lines=2</code>, код равен <code>0</code>.</p>
+<p>В корне <code>survey</code> создайте <code>explanation.md</code> в
+UTF-8: укажите ОС, оболочку и её версию, свою команду, рабочий каталог,
+наблюдавшийся код завершения и соответствие числа строк содержимому
+входа.</p>
+<p>Предъявите ZIP с единственным корнем <code>survey</code>: исходными
+<code>tools</code>, <code>result/current/morning.txt</code>, полученным
+<code>result/line-count.txt</code> и <code>explanation.md</code>.</p>
+<p>На разборе повторите вызов с новым временным именем отчёта внутри
+<code>survey</code>. Покажите рабочий каталог, переданные пути, код и
+результат. Удалите временный отчёт после демонстрации.</p>
+<p>Подготовка: <a
+href="https://bsu-rfct-afonenko-courses.github.io/System-Practice/practice/work-environment.html#/sec-work-environment-intro"
+target="_blank" rel="noopener noreferrer">вводный разбор запуска</a> и
+<a
+href="https://bsu-rfct-afonenko-courses.github.io/System-Practice/handbook/work-environment.html#sec-reference-script"
+target="_blank" rel="noopener noreferrer">подготовка среды и запуск
+сценария</a>.</p>
+<section id="pl-dba13d69-dcb3-58dd-b193-b84c9937a5a8-открытые-примеры-1"
+class="public-tests">
+<h3>Открытые примеры</h3>
+<h4
+id="pl-dba13d69-dcb3-58dd-b193-b84c9937a5a8-отчёт-по-двум-строкам">Отчёт
+по двум строкам</h4>
+<p>В <code>result/current/morning.txt</code> находятся <code>A=12</code>
+и <code>B=7</code> с завершающими LF. Каталог <code>result</code>
+существует, <code>result/line-count.txt</code> отсутствует. Вызов
+готового инструмента своего маршрута для этих путей создаёт отчёт с
+байтами <code>lines=2</code> и LF в UTF-8 без BOM. Терминал показывает
+<code>lines=2</code>, код завершения — <code>0</code>; вход и оба
+инструмента сохранены. Прочитайте отчёт и установите код вызова.</p>
+<h4
+id="pl-dba13d69-dcb3-58dd-b193-b84c9937a5a8-повтор-с-новым-именем-отчёта">Повтор
+с новым именем отчёта</h4>
+<p>После первого вызова сохранены исходные инструменты, вход и итоговый
+<code>result/line-count.txt</code>. Для повторного вызова выбрано
+свободное имя внутри <code>survey</code>, родительский каталог
+существует. На разборе вызов с этим выходным путём создаёт временный
+отчёт <code>lines=2</code> с LF, выводит <code>lines=2</code> в терминал
+и завершается с кодом <code>0</code>. Покажите рабочий каталог, пути,
+код и чтение отчёта, затем удалите временный файл. Первоначальный отчёт,
+вход и инструменты сохраняются. Имя временного файла и запись вызова
+выбираете самостоятельно.</p>
+<p>Архив позволяет прочитать отчёт и входы. Вызов, рабочий каталог,
+переданные пути и код предъявляются при наблюдении запуска. Поведение
+при отсутствующем входе задано в договоре инструмента; обязательные
+запуски этой задачи описаны выше.</p>
+</section>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+
+<pl-file-upload file-patterns="*" optional-file-patterns="*"></pl-file-upload>
+</pl-question-panel>

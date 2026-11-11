@@ -1,0 +1,20 @@
+{
+  "uuid": "dba13d69-dcb3-58dd-b193-b84c9937a5a8",
+  "type": "v3",
+  "title": "Запуск счётчика строк",
+  "topic": "Shell",
+  "gradingMethod": "Manual",
+  "singleVariant": true,
+  "showCorrectAnswer": false,
+  "partialCredit": false,
+  "preferences": {
+    "courseRequirement": {
+      "type": "string",
+      "default": "required",
+      "enum": [
+        "required",
+        "optional"
+      ]
+    }
+  }
+}

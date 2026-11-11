@@ -1,0 +1,164 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Средний</p>
+<p>Отправьте выбранную локальную историю в собственный репозиторий
+GitHub по SSH и получите её во второй обычной локальной копии через SSH
+clone. Сохраните исходную вершину main, достижимые коммиты и их
+содержимое.</p>
+<p>Маршрут — PowerShell 7/Windows либо fish/Linux. Нужны Git, доступ к
+GitHub и выбранный SSH-клиент с пригодным ключом. <a
+href="https://bsu-rfct-afonenko-courses.github.io/System-Practice/tasks/index.html#sec-bank"
+target="_blank" rel="noopener noreferrer">Общие правила подготовки и
+проверки архива</a>.</p>
+<h3
+id="pl-0e0f0521-eaee-5ee1-99a7-d014ebf4ff00-самостоятельный-вход">Самостоятельный
+вход</h3>
+<p>Комплект содержит готовый обычный репозиторий:</p>
+<pre class="text"><code>versioning/
+└── project/
+    ├── .git/
+    ├── README.md
+    └── catalog.tsv</code></pre>
+<p>README объясняет каталог оборудования по помещениям и столбцы
+<code>code</code> и <code>room</code>. В <code>catalog.tsv</code> эти
+столбцы разделены TAB, кодировка — UTF-8. Готовая история состоит из
+двух линейных коммитов: корневого S0 и его единственного потомка S1. В
+S0 есть <code>meter-01</code> в помещении <code>201</code>. В S1
+добавлен <code>meter-02</code> в помещении <code>203</code>; первая
+запись и README сохранены. <code>main</code> выбирает S1, индекс и
+рабочее дерево чисты. Remote, веток разработки, тегов, коммитов слияния
+и секретов в комплекте нет. S0/S1 — обозначения предоставленных
+состояний.</p>
+<p>Можно выбрать собственный предыдущий локальный проект: обычный
+репозиторий с выбранной <code>main</code>, доступной исходной историей и
+чистым состоянием. Расположите выбранный репозиторий в
+<code>versioning/project</code>, сохранив <code>.git</code>.
+Зафиксируйте его исходную вершину main для дальнейшего сравнения.
+Готовая история из комплекта позволяет начать эту задачу
+самостоятельно.</p>
+<h3
+id="pl-0e0f0521-eaee-5ee1-99a7-d014ebf4ff00-подготовка-доступа">Подготовка
+доступа</h3>
+<p>Используйте личный аккаунт GitHub либо зарегистрируйте его по <a
+href="https://bsu-rfct-afonenko-courses.github.io/System-Practice/handbook/version-control.html#sec-reference-git-account"
+target="_blank" rel="noopener noreferrer">инструкции подготовки
+аккаунта</a>. Подтвердите почту, настройте защиту входа и сохраните
+способы восстановления в личном хранилище. Сведения автора коммитов
+выбираются с учётом видимости почты в истории.</p>
+<p>Используйте пригодную существующую пару SSH-ключей либо создайте
+новую под свободным именем, сохранив прежние ключи. Зарегистрируйте
+открытый ключ в своём аккаунте. В Windows Git и проверочная команда
+должны использовать согласованный системный Windows OpenSSH со службой
+ssh-agent. Объяснение роли ключа, парольной фразы и агента находится в
+подготовке <a
+href="https://bsu-rfct-afonenko-courses.github.io/System-Practice/handbook/version-control.html#sec-reference-git-ssh"
+target="_blank" rel="noopener noreferrer">Windows</a> и <a
+href="https://bsu-rfct-afonenko-courses.github.io/System-Practice/handbook/version-control.html#sec-reference-git-ssh-fish"
+target="_blank" rel="noopener noreferrer">fish/Linux</a>.</p>
+<p>При первом подключении сверяйте ключ сервера с <a
+href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints"
+target="_blank" rel="noopener noreferrer">официальными отпечатками
+GitHub</a>. При несовпадении выясните причину до продолжения. Проверка
+соединения в режиме <code>ssh -T</code> должна распознать ваш ожидаемый
+GitHub-аккаунт. Прочитайте сообщение и объясните штатный код
+<code>1</code>: аутентификация успешна, интерактивная оболочка не
+предоставляется. Назначение проверки описано в <a
+href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection"
+target="_blank" rel="noopener noreferrer">инструкции GitHub</a>.
+Закрытый ключ, парольная фраза, токены и коды восстановления в проект и
+предъявляемые материалы не включаются.</p>
+<h3
+id="pl-0e0f0521-eaee-5ee1-99a7-d014ebf4ff00-отправка-и-получение">Отправка
+и получение</h3>
+<p>Создайте пустой учебный репозиторий GitHub с видимостью
+<code>Public</code> либо <code>Private</code>. Настройте SSH remote и
+отправьте исходную main. Проверьте на GitHub отправленную вершину и
+файлы.</p>
+<p>Выполните SSH clone с GitHub в <code>versioning/verification</code>.
+Это обычная копия с собственным <code>.git</code>, выбранной main и
+чистым состоянием. Отправленная вершина main, main в project и main в
+verification совпадают. Во второй копии доступны все коммиты, связи
+родителей и деревья, достижимые из исходной вершины выбранного входа.
+Сопоставьте историю и содержимое обеих копий. Для комплекта это S0/S1;
+для собственного проекта — весь его исходный граф, включая слияния, если
+они есть.</p>
+<p>Реальные SSH push и SSH clone предъявляются коротким сохранённым
+выводом существенных операций либо демонстрацией преподавателю.
+Локальный remote или копирование папки не выполняют требование обмена
+через GitHub.</p>
+<h3
+id="pl-0e0f0521-eaee-5ee1-99a7-d014ebf4ff00-пояснение-и-предъявление-1">Пояснение
+и предъявление</h3>
+<p>Создайте <code>versioning/explanation.md</code>. Укажите ОС,
+оболочку, версию Git и выбранный SSH-клиент, вид выбранного входа и его
+исходную вершину main. Запишите URL GitHub, видимость, распознанный
+SSH-аккаунт и результат отправки; расположение verification, её origin,
+полученную вершину и результат сравнения графа и файлов. Объясните
+проверку сервера, сообщение аутентификации и код <code>1</code>. Историю
+выбранного входа заново создавать и описывать её авторство не
+требуется.</p>
+<p>Предъявите URL и ZIP либо tar.gz каталога <code>versioning</code> с
+project, verification и explanation.md. Сохраните оба каталога
+<code>.git</code> целиком, с историей, ссылками, индексом и
+конфигурацией, вместе с рабочими файлами. После извлечения в обеих
+копиях должны читаться <code>.git/HEAD</code>, исходная история и одна
+отправленная вершина main; рабочее состояние чистое, содержимое
+соответствует сохранённым деревьям. На разборе покажите сравнение
+истории и признаки внешнего обмена, сохранив секретные данные
+закрытыми.</p>
+<p>Для <code>Public</code> преподаватель может открыть репозиторий
+непосредственно. Для <code>Private</code> предоставьте доступ
+преподавателю либо согласуйте показ истории и внешнего обмена вместе с
+локальным архивом. Видимость менять ради предъявления не требуется.</p>
+<p>Подготовка: <a
+href="https://bsu-rfct-afonenko-courses.github.io/System-Practice/theory/git-exchange.html#sec-git-exchange"
+target="_blank" rel="noopener noreferrer">обмен историей</a>, <a
+href="https://bsu-rfct-afonenko-courses.github.io/System-Practice/handbook/version-control.html#sec-reference-git-ssh-test"
+target="_blank" rel="noopener noreferrer">проверка SSH-доступа</a>, <a
+href="https://bsu-rfct-afonenko-courses.github.io/System-Practice/handbook/version-control.html#sec-reference-git-remote"
+target="_blank" rel="noopener noreferrer">удалённый репозиторий</a> и <a
+href="https://bsu-rfct-afonenko-courses.github.io/System-Practice/handbook/version-control.html#sec-reference-git-package"
+target="_blank" rel="noopener noreferrer">упаковка обеих копий</a>.</p>
+<p><a
+href="{{options.client_files_question_url}}/materials/version-control-github-ssh-start.zip"
+target="_blank" rel="noopener noreferrer">Скачать заготовку</a></p>
+<section id="pl-0e0f0521-eaee-5ee1-99a7-d014ebf4ff00-открытые-примеры-1"
+class="public-tests">
+<h3>Открытые примеры</h3>
+<h4
+id="pl-0e0f0521-eaee-5ee1-99a7-d014ebf4ff00-отправка-и-получение-всей-выбранной-истории">Отправка
+и получение всей выбранной истории</h4>
+<p>Исходный <code>project</code> чист, выбрана <code>main</code>, её
+вершина записана. Доступ по SSH подготовлен, собственный репозиторий
+GitHub пуст. После настоящего SSH push в GitHub и SSH clone оттуда в
+<code>verification</code> исходная, серверная и полученная вершины
+<code>main</code> совпадают. В <code>verification</code> доступны все
+исходные достижимые коммиты с теми же родителями и деревьями. У обеих
+локальных копий собственные <code>.git</code>, выбрана
+<code>main</code>, индекс и рабочее дерево чисты.</p>
+<p>Для готового входа сохраняются S0/S1 с <code>catalog.tsv</code> и две
+записи оборудования в S1. Для собственного проекта сохраняется его
+исходный граф, включая имеющиеся слияния; количество коммитов
+определяется выбранной историей. Допустимы <code>Public</code> и
+<code>Private</code>. Сохранённый вывод существенных операций либо
+демонстрация подтверждают GitHub и транспорт SSH.</p>
+<h4
+id="pl-0e0f0521-eaee-5ee1-99a7-d014ebf4ff00-успешная-аутентификация-с-кодом-1">Успешная
+аутентификация с кодом 1</h4>
+<p>Ключ сервера сверен с официальными отпечатками, выбранный SSH-клиент
+использует пригодный ключ ожидаемого аккаунта. Проверка в режиме
+<code>ssh -T</code> завершается с кодом <code>1</code> и сообщает об
+успешной аутентификации ожидаемого GitHub login и отсутствии
+интерактивной оболочки. Сообщение, login и код оцениваются вместе.
+Другой login или отказ аутентификации означают, что требуемый доступ ещё
+не подтверждён. Право записи в конкретный репозиторий и получение
+истории показывает внешний обмен из первого примера.</p>
+<p>Оба примера требуют наблюдения настоящего соединения. Адрес remote и
+совпадение локальных файлов устанавливают только часть результата. Если
+внешнее соединение предъявить не удалось, эта часть проверки остаётся
+открытой. Секретные значения сохраняются в личном хранилище.</p>
+</section>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+
+<pl-file-upload file-patterns="*" optional-file-patterns="*"></pl-file-upload>
+</pl-question-panel>

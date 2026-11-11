@@ -1,0 +1,13 @@
+{
+  "uuid": "e6fbcead-bbda-5acd-af77-d4e1dd4ea315",
+  "longName": "Пилот System Practice",
+  "studentLabels": [],
+  "timezone": "Europe/Minsk",
+  "selfEnrollment": {
+    "enabled": false
+  },
+  "publishing": {
+    "startDate": "1970-01-01T00:00:00Z",
+    "endDate": "9999-12-31T00:00:00Z"
+  }
+}

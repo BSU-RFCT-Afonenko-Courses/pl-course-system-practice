@@ -1,0 +1,20 @@
+{
+  "uuid": "0d2898f2-f934-5f50-bf6c-3340c50cdf6d",
+  "type": "v3",
+  "title": "Подготовка выпуска",
+  "topic": "Shell",
+  "gradingMethod": "Manual",
+  "singleVariant": true,
+  "showCorrectAnswer": false,
+  "partialCredit": false,
+  "preferences": {
+    "courseRequirement": {
+      "type": "string",
+      "default": "required",
+      "enum": [
+        "required",
+        "optional"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "uuid": "9c1f2992-0312-5f7b-8f31-ebfd8c5471d7",
+  "type": "Homework",
+  "title": "Обработка данных",
+  "set": "Homework",
+  "number": "2",
+  "maxPoints": 100,
+  "text": "\n",
+  "accessControl": [
+    {
+      "dateControl": {
+        "release": {
+          "date": "1970-01-01T00:00:00"
+        },
+        "due": {
+          "date": null
+        }
+      },
+      "afterComplete": {
+        "questions": {
+          "hidden": false
+        },
+        "score": {
+          "hidden": false
+        }
+      }
+    }
+  ],
+  "zones": [
+    {
+      "title": "Обработка данных",
+      "questions": [
+        {
+          "id": "system-practice/exr-data-processing-two-result-pipeline",
+          "autoPoints": 0,
+          "manualPoints": 100,
+          "triesPerVariant": 1,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    }
+  ]
+}

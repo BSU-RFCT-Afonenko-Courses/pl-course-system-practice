@@ -1,0 +1,45 @@
+{
+  "uuid": "48e13182-0469-5016-bde8-70893a6eb9ec",
+  "type": "Homework",
+  "title": "Подготовка выпуска",
+  "set": "Homework",
+  "number": "5",
+  "maxPoints": 100,
+  "text": "<p>Добровольная работа. Результат учитывается отдельно от обязательных\nлабораторных.</p>\n",
+  "accessControl": [
+    {
+      "dateControl": {
+        "release": {
+          "date": "1970-01-01T00:00:00"
+        },
+        "due": {
+          "date": null
+        }
+      },
+      "afterComplete": {
+        "questions": {
+          "hidden": false
+        },
+        "score": {
+          "hidden": false
+        }
+      }
+    }
+  ],
+  "zones": [
+    {
+      "title": "Подготовка выпуска",
+      "questions": [
+        {
+          "id": "system-practice/exr-project-maintenance-release",
+          "autoPoints": 0,
+          "manualPoints": 100,
+          "triesPerVariant": 1,
+          "preferences": {
+            "courseRequirement": "required"
+          }
+        }
+      ]
+    }
+  ]
+}

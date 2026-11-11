@@ -1,0 +1,127 @@
+<pl-question-panel>
+<p class="course-question-metadata">Сложность: Начальный</p>
+<p>Станция передала два файла измерений и рабочие записи. Подготовьте
+каталог результатов: текущие измерения должны быть доступны под
+согласованными именами, сведения о станции — в архиве.</p>
+<p>Маршрут — PowerShell 7/Windows либо fish/Linux. Файловые операции
+выполняйте командами выбранной оболочки. <a
+href="https://bsu-rfct-afonenko-courses.github.io/System-Practice/tasks/index.html#sec-bank"
+target="_blank" rel="noopener noreferrer">Общие правила подготовки и
+проверки архива</a>.</p>
+<h3
+id="pl-8591398a-ee1e-557a-831e-93ff7a9c7e52-исходное-состояние">Исходное
+состояние</h3>
+<p>Область изменений — каталог <code>survey</code> из комплекта:</p>
+<pre class="text"><code>survey/
+├── source/
+│   ├── morning log.txt
+│   └── evening.txt
+├── tools/
+│   ├── count.ps1
+│   └── count.fish
+└── work/
+    ├── draft.txt
+    └── scratch.txt</code></pre>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Файл</th>
+<th>Строки содержимого по порядку</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>source/morning log.txt</code></td>
+<td><code>A=12</code>, <code>B=7</code></td>
+</tr>
+<tr class="even">
+<td><code>source/evening.txt</code></td>
+<td><code>A=10</code>, <code>B=9</code></td>
+</tr>
+<tr class="odd">
+<td><code>work/draft.txt</code></td>
+<td><code>station=west</code></td>
+</tr>
+<tr class="even">
+<td><code>work/scratch.txt</code></td>
+<td><code>temporary</code></td>
+</tr>
+</tbody>
+</table>
+<p>Каждая указанная строка завершается LF; кодировка — UTF-8 без BOM.
+Все файлы и каталоги обычные. В начале <code>result</code> и
+<code>explanation.md</code> отсутствуют. Каталоги <code>source</code>,
+<code>tools</code> и их файлы должны сохранить имена и содержимое.</p>
+<h3
+id="pl-8591398a-ee1e-557a-831e-93ff7a9c7e52-требуемое-состояние">Требуемое
+состояние</h3>
+<p>Создайте <code>result/current/morning.txt</code> как точную копию
+<code>source/morning log.txt</code>, а
+<code>result/current/evening.txt</code> — как точную копию
+<code>source/evening.txt</code>. Копии получите файловыми командами;
+байты, порядок строк и переводы строк сохраняются.</p>
+<p>Разместите прежнее содержимое <code>work/draft.txt</code> в
+<code>result/archive/station.txt</code>, сохранив байты. Старый путь
+<code>work/draft.txt</code> должен отсутствовать. Удалите временную
+запись <code>work/scratch.txt</code> и опустевший каталог
+<code>work</code>.</p>
+<p>В <code>result</code> находятся только три результата:</p>
+<pre class="text"><code>result/
+├── current/
+│   ├── morning.txt
+│   └── evening.txt
+└── archive/
+    └── station.txt</code></pre>
+<h3
+id="pl-8591398a-ee1e-557a-831e-93ff7a9c7e52-пояснение-и-предъявление">Пояснение
+и предъявление</h3>
+<p>В корне <code>survey</code> создайте <code>explanation.md</code> в
+UTF-8. Укажите выбранные ОС, оболочку и её версию. Запишите
+относительный путь из <code>survey/result/current</code> к
+<code>survey/source/morning log.txt</code>; объясните переходы между
+каталогами и передачу пробела внутри одного пути. Приведите одну
+использованную команду и параметр, значение которого уточнили по
+справке: запрос справки либо точную ссылку и влияние параметра.</p>
+<p>Предъявите ZIP с единственным корнем <code>survey</code>, сохранив
+исходные <code>source</code>, <code>tools</code>, три результата и
+<code>explanation.md</code>. На разборе покажите чтение одного
+результирующего файла из выбранного каталога и объясните путь.</p>
+<p>Подготовка: <a
+href="https://bsu-rfct-afonenko-courses.github.io/System-Practice/theory/work-environment.html#sec-work-environment"
+target="_blank" rel="noopener noreferrer">рабочая среда</a>, <a
+href="https://bsu-rfct-afonenko-courses.github.io/System-Practice/practice/work-environment.html#/sec-work-environment-intro"
+target="_blank" rel="noopener noreferrer">вводный разбор</a>, <a
+href="https://bsu-rfct-afonenko-courses.github.io/System-Practice/handbook/work-environment.html#sec-work-environment-reference"
+target="_blank" rel="noopener noreferrer">файловые команды</a>.</p>
+<section id="pl-8591398a-ee1e-557a-831e-93ff7a9c7e52-открытые-примеры"
+class="public-tests">
+<h3>Открытые примеры</h3>
+<h4
+id="pl-8591398a-ee1e-557a-831e-93ff7a9c7e52-точные-копии-и-запись-станции">Точные
+копии и запись станции</h4>
+<p>В исходном <code>survey</code> утренний файл содержит
+<code>A=12</code>, <code>B=7</code>, вечерний — <code>A=10</code>,
+<code>B=9</code>, а <code>work/draft.txt</code> —
+<code>station=west</code>. После файловых операций предъявленный ZIP
+содержит эти же байты соответственно в
+<code>result/current/morning.txt</code>,
+<code>result/current/evening.txt</code> и
+<code>result/archive/station.txt</code>. Каждая строка завершается LF,
+кодировка — UTF-8 без BOM.</p>
+<h4
+id="pl-8591398a-ee1e-557a-831e-93ff7a9c7e52-опустевший-рабочий-каталог">Опустевший
+рабочий каталог</h4>
+<p>Если в исходном <code>work</code> находятся только
+<code>draft.txt</code> и <code>scratch.txt</code>, после переноса записи
+и удаления временного файла в ZIP отсутствуют оба прежних пути и сам
+<code>work</code>. Запись станции читается в
+<code>result/archive/station.txt</code>; имена и байты
+<code>source</code> и обоих инструментов сохранены.</p>
+<p>Путь с пробелом, использование справки и чтение результата из
+выбранного каталога поясните и покажите преподавателю.</p>
+</section>
+
+<p><a href="{{options.client_files_question_url}}/starter.zip">Скачать заготовку</a> · <a href="{{options.client_files_question_url}}/starter/README.md">README</a></p>
+
+<pl-file-upload file-patterns="*" optional-file-patterns="*"></pl-file-upload>
+</pl-question-panel>

@@ -1,0 +1,417 @@
+{
+  "schemaVersion": 5,
+  "courseId": "system-practice",
+  "bookRoot": "tasks",
+  "questions": [
+    "system-practice/exr-data-processing-two-result-pipeline",
+    "system-practice/exr-project-maintenance-release",
+    "system-practice/exr-version-control-github-ssh",
+    "system-practice/exr-version-control-local-history",
+    "system-practice/exr-version-control-restore-selected-state",
+    "system-practice/exr-work-environment-file-state",
+    "system-practice/exr-work-environment-launch-counter"
+  ],
+  "gradingPayloads": {
+    "system-practice/exr-work-environment-file-state": {
+      "kind": "project",
+      "uuid": "8591398a-ee1e-557a-831e-93ff7a9c7e52",
+      "grading": {
+        "method": "manual"
+      },
+      "submission": {
+        "mode": "upload"
+      },
+      "sourceRoot": "projects/work-environment/file-state"
+    },
+    "system-practice/exr-work-environment-launch-counter": {
+      "kind": "project",
+      "uuid": "dba13d69-dcb3-58dd-b193-b84c9937a5a8",
+      "grading": {
+        "method": "manual"
+      },
+      "submission": {
+        "mode": "upload"
+      },
+      "sourceRoot": "projects/work-environment/launch-counter"
+    },
+    "system-practice/exr-data-processing-two-result-pipeline": {
+      "kind": "project",
+      "uuid": "d752f980-b0f4-5480-ae1f-6fc3f251e5f6",
+      "grading": {
+        "method": "manual"
+      },
+      "submission": {
+        "mode": "upload"
+      },
+      "sourceRoot": "projects/data-processing/two-result-pipeline"
+    },
+    "system-practice/exr-version-control-local-history": {
+      "kind": "project",
+      "uuid": "0bebd8fc-227b-5ee1-90e1-16417a1e4577",
+      "grading": {
+        "method": "manual"
+      },
+      "submission": {
+        "mode": "upload"
+      },
+      "sourceRoot": "projects/version-control/local-history"
+    },
+    "system-practice/exr-version-control-github-ssh": {
+      "kind": "project",
+      "uuid": "0e0f0521-eaee-5ee1-99a7-d014ebf4ff00",
+      "grading": {
+        "method": "manual"
+      },
+      "submission": {
+        "mode": "upload"
+      },
+      "sourceRoot": "projects/version-control/github-ssh"
+    },
+    "system-practice/exr-version-control-restore-selected-state": {
+      "kind": "workspace",
+      "uuid": "9a2d15a3-e890-5c23-aa99-3f0cb086244f",
+      "grading": {
+        "method": "manual"
+      },
+      "submission": {
+        "mode": "workspace",
+        "workspaceOptions": {
+          "image": "ghcr.io/afonenko-course-tools/sp-git-workspace@sha256:465bf16061c3a44afdc61c77d1dd853216be35b0203072cb8e7c69a51a1bf31a",
+          "home": "/home/coder/workspace",
+          "port": 8080,
+          "rewriteUrl": true,
+          "gradedFiles": [
+            "work/**",
+            "work/.git/**",
+            "work/.*",
+            "explanation.m[d]",
+            ".pl-seed/identity.jso[n]"
+          ]
+        }
+      },
+      "sourceRoot": "projects/version-control/restore-selected-state",
+      "upstreamGradingMethod": "Manual",
+      "singleVariant": true,
+      "seed": {
+        "schema": "pl-git-workspace-seed-v1",
+        "archive": "workspace/.pl-seed/starter.zip",
+        "manifest": "workspace/.pl-seed/manifest.json"
+      }
+    },
+    "system-practice/exr-project-maintenance-release": {
+      "kind": "project",
+      "uuid": "0d2898f2-f934-5f50-bf6c-3340c50cdf6d",
+      "grading": {
+        "method": "manual"
+      },
+      "submission": {
+        "mode": "upload"
+      },
+      "sourceRoot": "projects/project-maintenance/release"
+    }
+  },
+  "works": [
+    {
+      "id": "sec-lab-work-environment",
+      "slots": [
+        {
+          "id": "system-practice/sec-lab-work-environment/exr-work-environment-file-state",
+          "selection": "fixed",
+          "candidates": [
+            "system-practice/exr-work-environment-file-state"
+          ],
+          "assignment": {
+            "requirement": "required",
+            "workMode": "individual"
+          }
+        },
+        {
+          "id": "system-practice/sec-lab-work-environment/exr-work-environment-launch-counter",
+          "selection": "fixed",
+          "candidates": [
+            "system-practice/exr-work-environment-launch-counter"
+          ],
+          "assignment": {
+            "requirement": "required",
+            "workMode": "individual"
+          }
+        }
+      ],
+      "policy": {
+        "auto-points": 0,
+        "manual-points": 50,
+        "attempts": 1,
+        "max-points": 100,
+        "pass": {
+          "at-least": 2
+        }
+      },
+      "completion": {
+        "schemaVersion": 2,
+        "mode": "required-slot-completion",
+        "source": "per-slot-results-v2",
+        "slotIds": [
+          "system-practice/sec-lab-work-environment/exr-work-environment-file-state",
+          "system-practice/sec-lab-work-environment/exr-work-environment-launch-counter"
+        ],
+        "requiredSlotIds": [
+          "system-practice/sec-lab-work-environment/exr-work-environment-file-state",
+          "system-practice/sec-lab-work-environment/exr-work-environment-launch-counter"
+        ],
+        "atLeast": 2,
+        "fullyCompletedScore": 1
+      }
+    },
+    {
+      "id": "sec-lab-data-processing",
+      "slots": [
+        {
+          "id": "system-practice/sec-lab-data-processing/exr-data-processing-two-result-pipeline",
+          "selection": "fixed",
+          "candidates": [
+            "system-practice/exr-data-processing-two-result-pipeline"
+          ],
+          "assignment": {
+            "requirement": "required",
+            "workMode": "individual"
+          }
+        }
+      ],
+      "policy": {
+        "auto-points": 0,
+        "manual-points": 100,
+        "attempts": 1,
+        "max-points": 100,
+        "pass": {
+          "at-least": 1
+        }
+      },
+      "completion": {
+        "schemaVersion": 2,
+        "mode": "required-slot-completion",
+        "source": "per-slot-results-v2",
+        "slotIds": [
+          "system-practice/sec-lab-data-processing/exr-data-processing-two-result-pipeline"
+        ],
+        "requiredSlotIds": [
+          "system-practice/sec-lab-data-processing/exr-data-processing-two-result-pipeline"
+        ],
+        "atLeast": 1,
+        "fullyCompletedScore": 1
+      }
+    },
+    {
+      "id": "sec-lab-version-control",
+      "slots": [
+        {
+          "id": "system-practice/sec-lab-version-control/exr-version-control-local-history",
+          "selection": "fixed",
+          "candidates": [
+            "system-practice/exr-version-control-local-history"
+          ],
+          "assignment": {
+            "requirement": "required",
+            "workMode": "individual"
+          }
+        },
+        {
+          "id": "system-practice/sec-lab-version-control/exr-version-control-github-ssh",
+          "selection": "fixed",
+          "candidates": [
+            "system-practice/exr-version-control-github-ssh"
+          ],
+          "assignment": {
+            "requirement": "required",
+            "workMode": "individual"
+          }
+        }
+      ],
+      "policy": {
+        "auto-points": 0,
+        "manual-points": 50,
+        "attempts": 1,
+        "max-points": 100,
+        "pass": {
+          "at-least": 2
+        }
+      },
+      "completion": {
+        "schemaVersion": 2,
+        "mode": "required-slot-completion",
+        "source": "per-slot-results-v2",
+        "slotIds": [
+          "system-practice/sec-lab-version-control/exr-version-control-local-history",
+          "system-practice/sec-lab-version-control/exr-version-control-github-ssh"
+        ],
+        "requiredSlotIds": [
+          "system-practice/sec-lab-version-control/exr-version-control-local-history",
+          "system-practice/sec-lab-version-control/exr-version-control-github-ssh"
+        ],
+        "atLeast": 2,
+        "fullyCompletedScore": 1
+      }
+    },
+    {
+      "id": "sec-unit-version-control-restore-selected-state",
+      "slots": [
+        {
+          "id": "system-practice/sec-unit-version-control-restore-selected-state/exr-version-control-restore-selected-state",
+          "selection": "fixed",
+          "candidates": [
+            "system-practice/exr-version-control-restore-selected-state"
+          ],
+          "assignment": {
+            "requirement": "required",
+            "workMode": "individual"
+          }
+        }
+      ],
+      "policy": {
+        "auto-points": 0,
+        "manual-points": 100,
+        "attempts": 1,
+        "max-points": 100,
+        "pass": {
+          "at-least": 1
+        }
+      },
+      "completion": {
+        "schemaVersion": 2,
+        "mode": "required-slot-completion",
+        "source": "per-slot-results-v2",
+        "slotIds": [
+          "system-practice/sec-unit-version-control-restore-selected-state/exr-version-control-restore-selected-state"
+        ],
+        "requiredSlotIds": [
+          "system-practice/sec-unit-version-control-restore-selected-state/exr-version-control-restore-selected-state"
+        ],
+        "atLeast": 1,
+        "fullyCompletedScore": 1
+      }
+    },
+    {
+      "id": "sec-unit-project-maintenance-release",
+      "slots": [
+        {
+          "id": "system-practice/sec-unit-project-maintenance-release/exr-project-maintenance-release",
+          "selection": "fixed",
+          "candidates": [
+            "system-practice/exr-project-maintenance-release"
+          ],
+          "assignment": {
+            "requirement": "required",
+            "workMode": "individual"
+          }
+        }
+      ],
+      "policy": {
+        "auto-points": 0,
+        "manual-points": 100,
+        "attempts": 1,
+        "max-points": 100,
+        "pass": {
+          "at-least": 1
+        }
+      },
+      "completion": {
+        "schemaVersion": 2,
+        "mode": "required-slot-completion",
+        "source": "per-slot-results-v2",
+        "slotIds": [
+          "system-practice/sec-unit-project-maintenance-release/exr-project-maintenance-release"
+        ],
+        "requiredSlotIds": [
+          "system-practice/sec-unit-project-maintenance-release/exr-project-maintenance-release"
+        ],
+        "atLeast": 1,
+        "fullyCompletedScore": 1
+      }
+    }
+  ],
+  "instances": {
+    "pilot": {
+      "works": [
+        "sec-lab-work-environment",
+        "sec-lab-data-processing",
+        "sec-lab-version-control",
+        "sec-unit-version-control-restore-selected-state",
+        "sec-unit-project-maintenance-release"
+      ],
+      "selfEnrollment": false
+    }
+  },
+  "files": [
+    "courseInstances/pilot/assessments/sec-lab-data-processing/infoAssessment.json",
+    "courseInstances/pilot/assessments/sec-lab-version-control/infoAssessment.json",
+    "courseInstances/pilot/assessments/sec-lab-work-environment/infoAssessment.json",
+    "courseInstances/pilot/assessments/sec-unit-project-maintenance-release/infoAssessment.json",
+    "courseInstances/pilot/assessments/sec-unit-version-control-restore-selected-state/infoAssessment.json",
+    "courseInstances/pilot/infoCourseInstance.json",
+    "infoCourse.json",
+    "questions/system-practice/exr-data-processing-two-result-pipeline/clientFilesQuestion/starter.zip",
+    "questions/system-practice/exr-data-processing-two-result-pipeline/clientFilesQuestion/starter/README.md",
+    "questions/system-practice/exr-data-processing-two-result-pipeline/clientFilesQuestion/starter/processing/expected/empty.csv",
+    "questions/system-practice/exr-data-processing-two-result-pipeline/clientFilesQuestion/starter/processing/expected/empty.txt",
+    "questions/system-practice/exr-data-processing-two-result-pipeline/clientFilesQuestion/starter/processing/expected/excluded.csv",
+    "questions/system-practice/exr-data-processing-two-result-pipeline/clientFilesQuestion/starter/processing/expected/excluded.txt",
+    "questions/system-practice/exr-data-processing-two-result-pipeline/clientFilesQuestion/starter/processing/expected/no-match-excluded.csv",
+    "questions/system-practice/exr-data-processing-two-result-pipeline/clientFilesQuestion/starter/processing/expected/no-match-excluded.txt",
+    "questions/system-practice/exr-data-processing-two-result-pipeline/clientFilesQuestion/starter/processing/expected/selected.csv",
+    "questions/system-practice/exr-data-processing-two-result-pipeline/clientFilesQuestion/starter/processing/expected/selected.txt",
+    "questions/system-practice/exr-data-processing-two-result-pipeline/clientFilesQuestion/starter/processing/inputs/no-match.csv",
+    "questions/system-practice/exr-data-processing-two-result-pipeline/clientFilesQuestion/starter/processing/inputs/no-match.txt",
+    "questions/system-practice/exr-data-processing-two-result-pipeline/clientFilesQuestion/starter/processing/inputs/readings.csv",
+    "questions/system-practice/exr-data-processing-two-result-pipeline/clientFilesQuestion/starter/processing/inputs/readings.txt",
+    "questions/system-practice/exr-data-processing-two-result-pipeline/info.json",
+    "questions/system-practice/exr-data-processing-two-result-pipeline/question.html",
+    "questions/system-practice/exr-project-maintenance-release/clientFilesQuestion/materials/project-maintenance-start.zip",
+    "questions/system-practice/exr-project-maintenance-release/clientFilesQuestion/starter.zip",
+    "questions/system-practice/exr-project-maintenance-release/clientFilesQuestion/starter/README.md",
+    "questions/system-practice/exr-project-maintenance-release/clientFilesQuestion/starter/project-maintenance-start.zip",
+    "questions/system-practice/exr-project-maintenance-release/clientFilesQuestion/starter/resources/materials/project-maintenance-start.zip",
+    "questions/system-practice/exr-project-maintenance-release/info.json",
+    "questions/system-practice/exr-project-maintenance-release/question.html",
+    "questions/system-practice/exr-version-control-github-ssh/clientFilesQuestion/materials/version-control-github-ssh-start.zip",
+    "questions/system-practice/exr-version-control-github-ssh/clientFilesQuestion/starter.zip",
+    "questions/system-practice/exr-version-control-github-ssh/clientFilesQuestion/starter/README.md",
+    "questions/system-practice/exr-version-control-github-ssh/clientFilesQuestion/starter/resources/materials/version-control-github-ssh-start.zip",
+    "questions/system-practice/exr-version-control-github-ssh/clientFilesQuestion/starter/versioning/project/README.md",
+    "questions/system-practice/exr-version-control-github-ssh/clientFilesQuestion/starter/versioning/project/catalog.tsv",
+    "questions/system-practice/exr-version-control-github-ssh/info.json",
+    "questions/system-practice/exr-version-control-github-ssh/question.html",
+    "questions/system-practice/exr-version-control-local-history/clientFilesQuestion/starter.zip",
+    "questions/system-practice/exr-version-control-local-history/clientFilesQuestion/starter/README.md",
+    "questions/system-practice/exr-version-control-local-history/clientFilesQuestion/starter/versioning/project/README.md",
+    "questions/system-practice/exr-version-control-local-history/clientFilesQuestion/starter/versioning/project/criteria.txt",
+    "questions/system-practice/exr-version-control-local-history/clientFilesQuestion/starter/versioning/project/measurements.tsv",
+    "questions/system-practice/exr-version-control-local-history/info.json",
+    "questions/system-practice/exr-version-control-local-history/question.html",
+    "questions/system-practice/exr-version-control-restore-selected-state/clientFilesQuestion/materials/version-control-restore-selected-state-start.zip",
+    "questions/system-practice/exr-version-control-restore-selected-state/clientFilesQuestion/starter.zip",
+    "questions/system-practice/exr-version-control-restore-selected-state/clientFilesQuestion/starter/README.md",
+    "questions/system-practice/exr-version-control-restore-selected-state/clientFilesQuestion/starter/resources/materials/version-control-restore-selected-state-start.zip",
+    "questions/system-practice/exr-version-control-restore-selected-state/clientFilesQuestion/starter/work/README.md",
+    "questions/system-practice/exr-version-control-restore-selected-state/clientFilesQuestion/starter/work/notes.txt",
+    "questions/system-practice/exr-version-control-restore-selected-state/info.json",
+    "questions/system-practice/exr-version-control-restore-selected-state/question.html",
+    "questions/system-practice/exr-version-control-restore-selected-state/workspace/.pl-seed/manifest.json",
+    "questions/system-practice/exr-version-control-restore-selected-state/workspace/.pl-seed/starter.zip",
+    "questions/system-practice/exr-work-environment-file-state/clientFilesQuestion/starter.zip",
+    "questions/system-practice/exr-work-environment-file-state/clientFilesQuestion/starter/README.md",
+    "questions/system-practice/exr-work-environment-file-state/clientFilesQuestion/starter/survey/source/evening.txt",
+    "questions/system-practice/exr-work-environment-file-state/clientFilesQuestion/starter/survey/source/morning log.txt",
+    "questions/system-practice/exr-work-environment-file-state/clientFilesQuestion/starter/survey/tools/count.fish",
+    "questions/system-practice/exr-work-environment-file-state/clientFilesQuestion/starter/survey/tools/count.ps1",
+    "questions/system-practice/exr-work-environment-file-state/clientFilesQuestion/starter/survey/work/draft.txt",
+    "questions/system-practice/exr-work-environment-file-state/clientFilesQuestion/starter/survey/work/scratch.txt",
+    "questions/system-practice/exr-work-environment-file-state/info.json",
+    "questions/system-practice/exr-work-environment-file-state/question.html",
+    "questions/system-practice/exr-work-environment-launch-counter/clientFilesQuestion/starter.zip",
+    "questions/system-practice/exr-work-environment-launch-counter/clientFilesQuestion/starter/README.md",
+    "questions/system-practice/exr-work-environment-launch-counter/clientFilesQuestion/starter/survey/result/current/morning.txt",
+    "questions/system-practice/exr-work-environment-launch-counter/clientFilesQuestion/starter/survey/tools/count.fish",
+    "questions/system-practice/exr-work-environment-launch-counter/clientFilesQuestion/starter/survey/tools/count.ps1",
+    "questions/system-practice/exr-work-environment-launch-counter/info.json",
+    "questions/system-practice/exr-work-environment-launch-counter/question.html"
+  ]
+}

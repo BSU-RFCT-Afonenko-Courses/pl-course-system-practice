@@ -1,0 +1,20 @@
+{
+  "uuid": "8591398a-ee1e-557a-831e-93ff7a9c7e52",
+  "type": "v3",
+  "title": "Каталог измерений станции",
+  "topic": "Shell",
+  "gradingMethod": "Manual",
+  "singleVariant": true,
+  "showCorrectAnswer": false,
+  "partialCredit": false,
+  "preferences": {
+    "courseRequirement": {
+      "type": "string",
+      "default": "required",
+      "enum": [
+        "required",
+        "optional"
+      ]
+    }
+  }
+}

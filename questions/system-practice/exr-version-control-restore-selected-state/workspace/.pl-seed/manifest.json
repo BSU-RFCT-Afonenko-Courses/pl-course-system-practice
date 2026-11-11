@@ -1,0 +1,17 @@
+{
+  "schema": "pl-git-workspace-seed-v1",
+  "files": [
+    "README.md",
+    "resources/materials/version-control-restore-selected-state-start.zip",
+    "work/.git/config",
+    "work/.git/HEAD",
+    "work/.git/index",
+    "work/.git/objects/19/7eadd5fda0bb5d7bab5425afa02676d4e69efa",
+    "work/.git/objects/2f/12c0ccccc3c10c483502559fa7efee33a52607",
+    "work/.git/objects/ad/1bb935aa9636bd9bde4553a36a90fd2a7870a1",
+    "work/.git/objects/b8/dbbc56d6a7466b65e8c908c49ce9a6e0f08c76",
+    "work/.git/refs/heads/main",
+    "work/notes.txt",
+    "work/README.md"
+  ]
+}
